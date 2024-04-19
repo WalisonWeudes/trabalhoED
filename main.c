@@ -20,6 +20,7 @@ int main()
     printf("1: Cadrastrar Cliente \n");
     printf("2: Realizar Pedido \n");
     printf("3: Consultar Cliente \n");
+    printf("4: Cadrastrar funcionario \n");
 
     printf("Cadrastrando Cliente... \n");
     cadrastrarCliente(&cliente);
