@@ -15,21 +15,27 @@
 #include "src/funcoesFuncionarios/opcaoMain/cadastrarFuncionario.h"
 #include "src/funcoesFuncionarios/opcaoMain/exibirFuncionario.h"
 
+void orgazizacao()
+{
+    
+
+}
+
+
 int main()
 {
     srand((unsigned)time(NULL));
 
     Funcionario *funcionario = NULL;
 
-    printf("0: Sair \n");
-    printf("1: Cadrastrar Cliente \n");
-    printf("2: Realizar Pedido \n");
-    printf("3: Consultar Cliente \n");
-    printf("4: Cadrastrar funcionario \n");
+    printf("1-Exibir Funcionarios\n");
 
-    printf("cadastrando funcionario....\n");
-    cadastrarFuncionario(&funcionario);
-    printf("exibindo funcionarios....\n");
-    exibirTodosFuncionarios(funcionario);
+    printf("2-Exibir clientes\n");
+
+    printf("3-exibir pedidos\n");
+
+    printf("4-Exivir faturamento\n");
+
+
     return 0;
 }
