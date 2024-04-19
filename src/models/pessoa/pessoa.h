@@ -4,8 +4,8 @@
 typedef struct
 {
     char *nome;
-    unsigned int id;
-    unsigned int idade;
+    int id;
+    int idade;
 } Pessoa;
 
 

@@ -12,7 +12,7 @@ typedef struct
     int IdDoFuncionario;
     int qtdItens;
     char **Itens;
-    float valorDoPedido;
+    double valorDoPedido;
 
 } Pedidos;
 
@@ -21,7 +21,7 @@ typedef struct
     Pessoa pessoa;
     Pedidos *pedidos;
 
-    float limiteCredito;
+    double limiteCredito;
     int qtdPedidos;
 } Cliente;
 

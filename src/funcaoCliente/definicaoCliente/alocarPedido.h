@@ -13,7 +13,6 @@ void alocarPedido(Pedidos **pedidos, int tam)
         printf("ERRO alocar pedido!!!!!");
         exit(EXIT_FAILURE);
     }
-    printf("Pedido Alocado!");
 }
 
 #endif // ALOCARPEDIDO
