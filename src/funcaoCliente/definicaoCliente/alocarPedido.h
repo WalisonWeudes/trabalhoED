@@ -5,9 +5,9 @@
 #if !defined(ALOCARPEDIDO)
 #define ALOCARPEDIDO
 
-void alocarPedido(Pedidos **pedidos, int tam)
+void alocarPedido(Pedidos **pedidos, int qtd)
 {
-    *pedidos = (Pedidos *)calloc(sizeof(Pedidos), tam);
+    *pedidos = (Pedidos *)realloc(*pedidos, sizeof(Pedidos) * qtd);
     if (!(*pedidos))
     {
         printf("ERRO alocar pedido!!!!!");

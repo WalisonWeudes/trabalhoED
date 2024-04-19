@@ -9,21 +9,20 @@
 #if !defined(PRENDERPEDIDO)
 #define PRENDERPEDIDO
 
-void prencherPedido(Pedidos *pedido)
+void preencherPedido(Pedidos *pedido, int i)
 {
     printf("Digite o valor do pedido: ");
-    getDouble(&pedido->valorDoPedido);
+    getDouble(&pedido[i].valorDoPedido);
 
     printf("Digite a quantidade de itens: ");
-    getInt(&pedido->qtdItens);
+    getInt(&pedido[i].qtdItens);
 
-    pedido->id = Id++;
-
-    pedido->itens = (char **)calloc(sizeof(char *), pedido->qtdItens);
-    for (int x = 0; x < pedido->qtdItens; x++)
+    pedido[i].id = Id++;
+    pedido[i].itens = (char **)calloc(sizeof(char *), pedido[i].qtdItens);
+    for (int x = 0; x < pedido[i].qtdItens; x++)
     {
         printf("Digte o nome do pedido %d: ", x + 1);
-        alocarString(&pedido->itens[x]);
+        alocarString(&pedido[i].itens[x]);
     }
 }
 

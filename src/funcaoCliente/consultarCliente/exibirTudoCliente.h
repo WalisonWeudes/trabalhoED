@@ -15,7 +15,6 @@ void exibirTudoCliente(Cliente *cliente, int qtdClientes)
     printf("ID: %d\n", cliente[i].pessoa.id);
     printf("Quantidade de pedidos: %d\n", cliente[i].qtdPedidos);
 
-
     for (int x = 0; x < cliente[i].qtdPedidos; x++)
     {
       printf("Pedido %d\n", x + 1);

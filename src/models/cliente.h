@@ -3,7 +3,6 @@
 #if !defined(MODELCLIENTE)
 #define MODELCLIENTE
 
-
 typedef struct
 {
     int id;
@@ -20,7 +19,6 @@ typedef struct
 {
     Pessoa pessoa;
     Pedidos *pedidos;
-
     double limiteCredito;
     int qtdPedidos;
 } Cliente;
