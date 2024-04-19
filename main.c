@@ -5,37 +5,41 @@
 #include <string.h>
 #include <time.h>
 
-#include "src/funcaoCliente/opcaoMain/cadrastrarCliente.h"
-#include "src/funcaoCliente/opcaoMain/exibirTodosClientes.h"
-#include "src/funcaoCliente/opcaoMain/cadastarPedido.h"
-#include "src/funcaoCliente/opcaoMain/liberarClientes.h"
-#include "src/models/funcionario.h"
-#include "src/funcoesFuncionarios/definicaoFuncionario/preecherFuncionario.h"
-#include "src/funcoesFuncionarios/definicaoFuncionario/alocarFuncionario.h"
+#include "src/models/organizacao.h"
+
+#include "src/funcaoOrganizacao/opcaoMain/adicionarOrganizacao.h"
+#include "src/funcaoOrganizacao/opcaoMain/liberarOrganizacao.h"
+
 #include "src/funcoesFuncionarios/opcaoMain/cadastrarFuncionario.h"
 #include "src/funcoesFuncionarios/opcaoMain/exibirFuncionario.h"
 
-void orgazizacao()
-{
-    
-
-}
-
+#include "src/funcaoCliente/opcaoMain/cadrastrarCliente.h"
+#include "src/funcaoCliente/opcaoMain/exibirTodosClientes.h"
+#include "src/funcaoCliente/opcaoMain/cadastarPedido.h"
 
 int main()
 {
     srand((unsigned)time(NULL));
 
-    Funcionario *funcionario = NULL;
+    // Defina a organizacao
+    Organizacoes *organizacoes = NULL;
+    adicionarOrganizao(&organizacoes);
 
-    printf("1-Exibir Funcionarios\n");
+    // Definindo um funcionario para a organizacao
+    cadastrarFuncionario(&organizacoes[0].funcionario);
+    exibirTodosFuncionarios(organizacoes[0].funcionario);
 
-    printf("2-Exibir clientes\n");
+    // Definindo um cliente para a organizacao
+    cadrastrarCliente(&organizacoes[0].cliente);
+    
+    // ** ALERTA ** //
+    // Antes de chamar a função cadrastrarPedido, é necessário saber qual cliente deseja o pedido
+    int oClienteNumero = 0;
+    cadrastrarPedido(organizacoes[0].cliente, organizacoes[0].cliente[oClienteNumero].qtdPedidos);
+    cadrastrarPedido(organizacoes[0].cliente, organizacoes[0].cliente[oClienteNumero].qtdPedidos);
+    exibirTodosCliente(organizacoes[0].cliente);
 
-    printf("3-exibir pedidos\n");
-
-    printf("4-Exivir faturamento\n");
-
-
+    // Liberando a organizacao
+    liberarOrganizacoes(organizacoes);
     return 0;
 }

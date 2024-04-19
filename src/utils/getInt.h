@@ -13,7 +13,6 @@ void getInt(int *value)
 #endif
 
 #ifdef debug
-
   *value = rand() % 10;
   printf("%d\n", *value);
 #endif
