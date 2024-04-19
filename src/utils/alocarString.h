@@ -34,9 +34,10 @@ void alocarString(char **string)
 
 #ifdef debug
     *string = NULL;
-    int tamanho = snprintf(NULL, 0, "String %d", qtdSting++);
+    qtdSting++;
+    int tamanho = snprintf(NULL, 0, "String %d", qtdSting);
     *string = (char *)realloc(*string, (tamanho + 1) * sizeof(char));
-    printf("String %d\n", qtdSting++);
+    printf("String %d\n", qtdSting);
     sprintf(*string, "String %d", qtdSting);
 #endif
 }
