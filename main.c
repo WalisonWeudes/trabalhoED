@@ -19,7 +19,6 @@ void preencherPessoa(Pessoa pessoa)
     pessoa.id = ID++;
 }
 
-
 void prencherPedido(Pedidos pedido)
 {
     printf("Digite o valor do pedido: ");
@@ -42,7 +41,7 @@ void preecherCliente(Cliente *cliente, int quant)
     for (int i = 0; i < quant; i++)
     {
         alocarCliente(&cliente, quant);
-    
+
         preencherPessoa(cliente[i].pessoa);
         prencherPedido(*cliente[i].pedidos);
     }
