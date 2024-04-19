@@ -3,7 +3,7 @@
 
 void cadrastrarCliente(Cliente **cliente)
 {
-  alocarCliente(cliente, qtdDeClientes);
+  alocarCliente(cliente, qtdDeClientes + 1);
   preecherCliente(*cliente, qtdDeClientes);
   qtdDeClientes++;
 }
