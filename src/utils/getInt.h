@@ -6,12 +6,15 @@
 
 void getInt(int *value)
 {
+  fflush(stdin);
+
 #ifndef debug
   scanf("%d", value);
 #endif
 
 #ifdef debug
-  *value = rand() & 100;
+
+  *value = rand() % 10;
   printf("%d\n", *value);
 #endif
 }

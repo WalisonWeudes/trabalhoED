@@ -11,7 +11,7 @@ typedef struct
     int IdDaOrganizacao;
     int IdDoFuncionario;
     int qtdItens;
-    char **Itens;
+    char **itens;
     double valorDoPedido;
 
 } Pedidos;

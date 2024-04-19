@@ -2,6 +2,7 @@
 #define VARGLOBAL
 
 int Id = 0;
+int IdPedido = 0;
 int qtdDeClientes = 0;
 
 #ifdef debug

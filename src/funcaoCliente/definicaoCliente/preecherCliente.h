@@ -8,16 +8,22 @@
 
 void preecherCliente(Cliente *cliente, int i)
 {
-    i--;
 
-    preencherPessoa(&cliente->pessoa);
+    preencherPessoa(&(cliente[i].pessoa));
 
-    printf("Digite a quantidade de pedidos o cliente possui: ");
+    printf("Digite a quantidade de pedidos que o cliente possui: ");
     getInt(&cliente[i].qtdPedidos);
 
-    cliente[i].pedidos = NULL;
-    alocarPedido(&cliente[i].pedidos, cliente[i].qtdPedidos);
+    cliente[i].pedidos = (Pedidos *)malloc(cliente[i].qtdPedidos * sizeof(Pedidos));
+    if (cliente[i].pedidos == NULL)
+    {
+        printf("Erro ao alocar memória para os pedidos do cliente.\n");
+        return;
+    }
 
     for (int x = 0; x < cliente[i].qtdPedidos; x++)
-        prencherPedido(cliente[i].pedidos);
+    {
+        printf("Preenchendo detalhes do pedido %d:\n", x + 1);
+        prencherPedido(&cliente[i].pedidos[x]);
+    }
 }

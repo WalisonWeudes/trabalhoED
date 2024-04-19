@@ -17,11 +17,13 @@ void prencherPedido(Pedidos *pedido)
     printf("Digite a quantidade de itens: ");
     getInt(&pedido->qtdItens);
 
-    pedido->Itens = (char **)calloc(sizeof(char *), pedido->qtdItens);
+    pedido->id = Id++;
+
+    pedido->itens = (char **)calloc(sizeof(char *), pedido->qtdItens);
     for (int x = 0; x < pedido->qtdItens; x++)
     {
         printf("Digte o nome do pedido %d: ", x + 1);
-        alocarString(&pedido->Itens[x]);
+        alocarString(&pedido->itens[x]);
     }
 }
 
