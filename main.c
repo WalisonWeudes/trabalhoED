@@ -23,6 +23,7 @@ int main()
 
     printf("Cadrastrando Cliente... \n");
     cadrastrarCliente(&cliente);
+    cadrastrarCliente(&cliente);
     printf("Cliente cadrastrado! \n");
 
     printf("Adicionando Pedido... \n");
