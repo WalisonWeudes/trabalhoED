@@ -4,6 +4,7 @@
 #include "../../models/funcionario.h"
 #include  "../../utils/alocarString.h"
 #include "../../utils/getDouble.h"
+#include "../../utils/getInt.h"
 
 
 #ifndef PREENCHER_FUNCIONARIO_H

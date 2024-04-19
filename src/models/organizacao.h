@@ -13,7 +13,7 @@ typedef enum
 typedef struct
 {
     Funcionario *funcionario;
-    Pedidos *pedidos;
+    Cliente *cliente;
     Tipo_Organizacao tipo_Organizacao;
     char *nome;
     int id;
