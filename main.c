@@ -3,7 +3,8 @@
 #include <string.h>
 
 #include "models/cliente.h"
-#include "src/funcaoCliente/alocarCliente.h"
+#include "src/funcaoCliente/definicaoCliente/alocarCliente.h"
+
 #include "src/utils/alocarString.h"
 int ID = 0;
 

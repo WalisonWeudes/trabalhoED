@@ -4,11 +4,11 @@
 typedef struct
 {
     Funcionario *funcionario;
+    Pedidos *pedidos;
+    Tipo_Organizacao tipo_Organizacao;
     char *nome;
     int id;
     float faturamento;
-    Pedidos *pedidos;
-    Tipo_Organizacao tipo_Organizacao;
 } Organizacoes;
 
 typedef enum

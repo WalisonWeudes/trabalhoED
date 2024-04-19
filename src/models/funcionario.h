@@ -9,7 +9,6 @@ typedef struct
 
 typedef enum
 {
-
     GERENTE,
     SUPERVISOR,
     VENDEDOR,
