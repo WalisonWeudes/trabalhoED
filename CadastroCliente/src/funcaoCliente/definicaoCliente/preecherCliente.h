@@ -8,7 +8,12 @@
 
 void preecherCliente(Cliente *cliente, int i)
 {
+<<<<<<< HEAD
     
+=======
+    i--;
+
+>>>>>>> a943df7b8bc67e4f829ae5cd0456b54f169a4bd5
     preencherPessoa(cliente[i].pessoa);
 
     printf("Digite a quantidade de pedidos: ");
@@ -23,6 +28,10 @@ void preecherCliente(Cliente *cliente, int i)
 
 void TEST_preecherCliente(Cliente *cliente, int i)
 {
+<<<<<<< HEAD
+=======
+    i--;
+>>>>>>> a943df7b8bc67e4f829ae5cd0456b54f169a4bd5
 
     TEST_prencherPessoa(cliente[i].pessoa);
 
