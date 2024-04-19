@@ -9,12 +9,16 @@
 #include "src/funcaoCliente/opcaoMain/exibirTodosClientes.h"
 #include "src/funcaoCliente/opcaoMain/cadastarPedido.h"
 #include "src/funcaoCliente/opcaoMain/liberarClientes.h"
+#include "src/models/funcionario.h"
+#include "src/funcoesFuncionarios/definicaoFuncionario/preecherFuncionario.h"
+#include "src/funcoesFuncionarios/definicaoFuncionario/alocarFuncionario.h"
+#include "src/funcoesFuncionarios/opcaoMain/cadastrarFuncionario.h"
 
 int main()
 {
     srand((unsigned)time(NULL));
 
-    Cliente *cliente = NULL;
+    Funcionario *funcionario = NULL;
 
     printf("0: Sair \n");
     printf("1: Cadrastrar Cliente \n");
@@ -22,19 +26,7 @@ int main()
     printf("3: Consultar Cliente \n");
     printf("4: Cadrastrar funcionario \n");
 
-    printf("Cadrastrando Cliente... \n");
-    cadrastrarCliente(&cliente);
-    cadrastrarCliente(&cliente);
-    printf("Cliente cadrastrado! \n");
-
-    printf("Adicionando Pedido... \n");
-    cadrastrarPedido(cliente, 0);
-    printf("Pedido adicionado! \n");
-
-    printf("Exibindo Cliente\n");
-    exibirTodosCliente(cliente);
-    printf("Pronto!\n");
-
-    liberarClientes(cliente);
+    printf("cadastrando funcionario....\n");
+    cadastrarFuncionario(&funcionario);
     return 0;
 }

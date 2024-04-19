@@ -1,11 +1,6 @@
 #include "pessoa/pessoa.h"
-
-typedef struct
-{
-    Pessoa pessoa;
-    TipoFuncionario tipo;
-    float salario;
-} Funcionario;
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H
 
 typedef enum
 {
@@ -13,3 +8,12 @@ typedef enum
     SUPERVISOR,
     VENDEDOR,
 } TipoFuncionario;
+
+typedef struct
+{
+    Pessoa pessoa;
+    TipoFuncionario tipo;
+    double salario;
+} Funcionario;
+
+#endif

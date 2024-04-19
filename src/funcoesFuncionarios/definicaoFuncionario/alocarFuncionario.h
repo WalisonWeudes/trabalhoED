@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef ALOCAR_FUNCIONARIO_H
+#define ALOCAR_FUNCIONARIO_H
+
 void alocarFuncionario(Funcionario **funcionario, int tam)
 {
     *funcionario = (Funcionario *)realloc(*funcionario, sizeof(Funcionario) * tam);
@@ -11,3 +14,4 @@ void alocarFuncionario(Funcionario **funcionario, int tam)
         exit(EXIT_FAILURE);
     }
 }
+#endif
