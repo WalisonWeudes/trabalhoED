@@ -6,6 +6,8 @@
 #include "../../utils/getDouble.h"
 #include "../../utils/getInt.h"
 
+#include "alocarItem.h"
+
 #if !defined(PRENDERPEDIDO)
 #define PRENDERPEDIDO
 
@@ -18,7 +20,7 @@ void preencherPedido(Pedidos *pedido, int i)
     getInt(&pedido[i].qtdItens);
 
     pedido[i].id = Id++;
-    pedido[i].itens = (char **)calloc(sizeof(char *), pedido[i].qtdItens);
+    alocarItem(&pedido[i].itens, pedido[i].qtdItens);
     for (int x = 0; x < pedido[i].qtdItens; x++)
     {
         printf("Digte o nome do pedido %d: ", x + 1);
