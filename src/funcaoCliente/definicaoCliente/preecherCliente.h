@@ -9,6 +9,8 @@
 void preecherCliente(Cliente *cliente, int i)
 {
     preencherPessoa(&(cliente[i].pessoa));
+    printf("Quanto de credito o cliente possui: ");
+    scanf("%lf", &cliente[i].limiteCredito);
     cliente[i].qtdPedidos = 0;
     cliente[i].pedidos = NULL;
 }

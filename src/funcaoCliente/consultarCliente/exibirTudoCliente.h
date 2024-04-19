@@ -7,6 +7,7 @@
 
 void exibirTudoCliente(Cliente *cliente, int qtdClientes)
 {
+  printf("==============================================\n");
   for (int i = 0; i < qtdClientes; i++)
   {
     printf("Cliente %d\n", i + 1);
@@ -14,6 +15,7 @@ void exibirTudoCliente(Cliente *cliente, int qtdClientes)
     printf("Idade: %d\n", cliente[i].pessoa.idade);
     printf("ID: %d\n", cliente[i].pessoa.id);
     printf("Quantidade de pedidos: %d\n", cliente[i].qtdPedidos);
+    printf("Limite de credito: %.2lf\n", cliente[i].limiteCredito);
 
     for (int x = 0; x < cliente[i].qtdPedidos; x++)
     {
@@ -24,6 +26,7 @@ void exibirTudoCliente(Cliente *cliente, int qtdClientes)
       printf("ID do pedido: %d\n", cliente[i].pedidos[x].id);
     }
   }
+  printf("==============================================\n");
 }
 
 #endif // EXIBIRTUDOCLIENTE
