@@ -5,31 +5,22 @@
 #include <string.h>
 #include <time.h>
 
-#include "src/funcaoCliente/opcaoMain/cadrastrarCliente.h"
-#include "src/funcaoCliente/opcaoMain/exibirTodosClientes.h"
-#include "src/funcaoCliente/opcaoMain/cadastarPedido.h"
-#include "src/funcaoCliente/opcaoMain/liberarClientes.h"
-#include "src/models/funcionario.h"
-#include "src/funcoesFuncionarios/definicaoFuncionario/preecherFuncionario.h"
-#include "src/funcoesFuncionarios/definicaoFuncionario/alocarFuncionario.h"
-#include "src/funcoesFuncionarios/opcaoMain/cadastrarFuncionario.h"
-#include "src/funcoesFuncionarios/opcaoMain/exibirFuncionario.h"
+#include "src/models/organizacao.h"
+
+#include "src/funcaoOrganizacao/opcaoMain/adicionarOrganizacao.h"
+#include "src/funcaoOrganizacao/opcaoMain/liberarOrganizacao.h"
 
 int main()
 {
+    Organizacoes *organizacoes = NULL;
+
     srand((unsigned)time(NULL));
 
-    Funcionario *funcionario = NULL;
+    printf("adicionando organizacao \n");
+    adicionarOrganizao(&organizacoes);
+    printf("organizacao adicionada \n");
 
-    printf("0: Sair \n");
-    printf("1: Cadrastrar Cliente \n");
-    printf("2: Realizar Pedido \n");
-    printf("3: Consultar Cliente \n");
-    printf("4: Cadrastrar funcionario \n");
 
-    printf("cadastrando funcionario....\n");
-    cadastrarFuncionario(&funcionario);
-    printf("exibindo funcionarios....\n");
-    exibirTodosFuncionarios(funcionario);
+    liberarOrganizacoes(organizacoes);
     return 0;
 }
