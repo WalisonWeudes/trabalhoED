@@ -13,6 +13,7 @@
 #include "src/funcoesFuncionarios/definicaoFuncionario/preecherFuncionario.h"
 #include "src/funcoesFuncionarios/definicaoFuncionario/alocarFuncionario.h"
 #include "src/funcoesFuncionarios/opcaoMain/cadastrarFuncionario.h"
+#include "src/funcoesFuncionarios/opcaoMain/exibirFuncionario.h"
 
 int main()
 {
@@ -28,5 +29,7 @@ int main()
 
     printf("cadastrando funcionario....\n");
     cadastrarFuncionario(&funcionario);
+    printf("exibindo funcionarios....\n");
+    exibirTodosFuncionarios(funcionario);
     return 0;
 }
