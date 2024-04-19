@@ -1,6 +1,15 @@
 #include "funcionario.h"
 #include "cliente.h"
 
+#if !defined(MODELORGANIZACAO)
+#define MODELORGANIZACAO
+
+typedef enum
+{
+    PRIVADO,
+    PUBLICO,
+} Tipo_Organizacao;
+
 typedef struct
 {
     Funcionario *funcionario;
@@ -11,8 +20,4 @@ typedef struct
     float faturamento;
 } Organizacoes;
 
-typedef enum
-{
-    PRIVADO,
-    PUBLICO,
-} Tipo_Organizacao;
+#endif // MODELORGANIZACAO
