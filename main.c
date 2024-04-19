@@ -8,7 +8,7 @@
 #include "src/funcaoCliente/opcaoMain/cadrastrarCliente.h"
 #include "src/funcaoCliente/opcaoMain/exibirTodosClientes.h"
 #include "src/funcaoCliente/opcaoMain/cadastarPedido.h"
-#include "src/funcaoCliente/opcaoMain/liberarCliente.h"
+#include "src/funcaoCliente/opcaoMain/liberarClientes.h"
 
 int main()
 {
@@ -20,7 +20,6 @@ int main()
     printf("1: Cadrastrar Cliente \n");
     printf("2: Realizar Pedido \n");
     printf("3: Consultar Cliente \n");
-    printf("4: Consultar Pedido \n");
 
     printf("Cadrastrando Cliente... \n");
     cadrastrarCliente(&cliente);
@@ -34,6 +33,6 @@ int main()
     exibirTodosCliente(cliente);
     printf("Pronto!\n");
 
-    liberarCliente(cliente);
+    liberarClientes(cliente);
     return 0;
 }

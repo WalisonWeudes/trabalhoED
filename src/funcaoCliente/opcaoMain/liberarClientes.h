@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 
-void liberarCliente(Cliente *cliente)
+void liberarClientes(Cliente *cliente)
 {
   for (int i = 0; i < qtdDeClientes; i++)
   {
