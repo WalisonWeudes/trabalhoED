@@ -7,12 +7,15 @@
 
 
 #include "src/models/organizacao.h"
+#include "src/models/cliente.h"
 
 #include "src/funcaoOrganizacao/opcaoMain/adicionarOrganizacao.h"
 #include "src/funcaoOrganizacao/opcaoMain/liberarOrganizacao.h"
+#include "src/funcaoCliente/opcaoMain/exibirTodoFaturamento.h"
 
 #include "src/funcoesFuncionarios/opcaoMain/cadastrarFuncionario.h"
 #include "src/funcoesFuncionarios/opcaoMain/exibirFuncionario.h"
+
 
 #include "src/funcaoCliente/opcaoMain/cadrastrarCliente.h"
 #include "src/funcaoCliente/opcaoMain/exibirTodosClientes.h"
@@ -41,6 +44,7 @@ int main()
         printf("\n4-consultar funcionarios");
         printf("\n5-realizar pedido");
         printf("\n6-consultar todos os pedidos");
+        printf("\n7-consultar Faturamento");
         printf("\n0-sair\n");
         printf("=====================================\n");
         scanf("%d", &op);
@@ -69,6 +73,10 @@ int main()
             break;
         case 6:
             exibirTodosCliente(organizacoes[0].cliente);
+            break;
+        case 7:
+                exibirTodofaturamento(organizacoes[0].cliente);
+            
             break;
 
         default:
