@@ -48,7 +48,7 @@ int main()
         printf("\n0-sair\n");
         printf("=====================================\n");
         scanf("%d", &op);
-        //system("cls");
+        system("cls");
 
         switch (op)
         {

@@ -14,9 +14,13 @@ void exibirTudoFuncionarios(Funcionario *funcionario, int qtdDeFuncionarios)
         {
             printf("Vendedor\n");
         }
-        else
+        else if (funcionario[i].tipo == GERENTE)
         {
             printf("Gerente\n");
+        }
+        else
+        {
+            printf("Supervisor\n");
         }
         printf("Salario: %.2lf\n", funcionario[i].salario);
         printf("ID: %d\n", funcionario[i].pessoa.id);
